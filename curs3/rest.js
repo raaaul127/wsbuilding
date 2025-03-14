@@ -18,18 +18,21 @@ function httpGet() {
         userCard += `
         <h1 class="visually-hidden">Features examples</h1>
                     <div class="container px-4 py-5" id="featured-3">
-      <h2 class="pb-2 border-bottom">Columns with icons</h2>
+      <h2 class="pb-2 border-bottom">Columns</h2>
       <div id="continut" class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-5 mb-3">
             <img src="${myUsers[i].avatar}" style='max-width:200px'>
           </div>
-          <h3 class="fs-2 text-body-emphasis">${myUsers[i].first_name} ${myUsers[i].last_name}</h3>    
+          <h3 class="fs-2 text-body-emphasis">${myUsers[i].first_name} ${myUsers[i].last_name}</h3>
+            
           <p>${myUsers[i].email}</p>
           <a href="${myUsers[i].avatar}" class="icon-link">
             Call to action
           </a>
-        </div>`;
+          </div>
+        </div>
+      </div>`;
         
       }
       content.innerHTML = userCard;
@@ -40,7 +43,7 @@ function httpGet() {
   xhr.send(null);
 }
 
-//Get a user
+// Get a user
 // var url  = "http://localhost/javascript/curs5/restfull/users.php";
 // var xhr  = new XMLHttpRequest()
 // xhr.open('GET', url+'?id=2', true)
